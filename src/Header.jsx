@@ -1,6 +1,7 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   let Links = [
@@ -35,12 +36,12 @@ export default function Header() {
               key={link.name}
               className="md:ml-8 text-xl md:my-0 my-7 font-Paragraph"
             >
-              <a
-                href={link.link}
+              <NavLink
+                to={link.link}
                 className="text-gray-800 hover:text-gray-400 duration-500"
               >
                 {link.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
